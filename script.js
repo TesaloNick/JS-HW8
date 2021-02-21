@@ -2,8 +2,8 @@ const html = document.querySelector('html')
 html.setAttribute('lang', 'en'); // <html lang="en">
 
 const head = document.querySelector('head')
+const body = document.querySelector('body')
 const script = document.querySelector('script') // <script src="script.js"></script>
-script.setAttribute('defer', '')
 
 const metaCharset = document.createElement('meta') // <meta charset="UTF-8">
 metaCharset.setAttribute('charset', 'UTF-8')
@@ -28,11 +28,22 @@ head.appendChild(style)
 
 head.appendChild(script) // script в конец списка внутри тега <head>
 
-const body = document.querySelector('body')
+style.innerHTML = `*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}`
+
 const divUp = document.createElement('div')
-console.log(body);
+divUp.setAttribute('class', 'container')
+divUp.innerHTML = `
+    <h1>Choose Your Option</h1>
+    <p>But I must explain to you how all this mistaken idea of denouncing </p>
+`
 body.appendChild(divUp)
-// divUp.innerHTML = `
-//     <h1>Choose Your Option</h1>
-//     <p>But I must explain to you how all this mistaken idea of denouncing </p>
-// `
+
+
