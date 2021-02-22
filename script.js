@@ -19,6 +19,11 @@ metaAuthor.setAttribute('name', 'author')
 metaAuthor.setAttribute('content', 'Antonovich Nikolay')
 head.appendChild(metaAuthor)
 
+const metaViewport = document.createElement('meta') //<meta name="viewport" content="width=device-width, initial-scale=1">
+metaViewport.setAttribute('name', 'viewport')
+metaViewport.setAttribute('content', 'width=device-width, initial-scale=1')
+head.appendChild(metaViewport)
+
 const link1 = document.createElement('link') // <link rel="preconnect" href="https://fonts.gstatic.com">
 link1.setAttribute('rel', 'preconnect')
 link1.setAttribute('href', 'https://fonts.gstatic.com')
