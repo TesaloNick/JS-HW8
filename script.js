@@ -68,12 +68,28 @@ h1 + p{
 .options{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
 .option{
     text-align: center;
-    padding: 16vh 20%;
+    padding: 80px 20%;
     border: #E8E9ED 1px solid;
-    border-radius: 2px; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+.option:hover, .option:hover button{
+    background-color: #8F75BE;
+    transition: 0.5s;
+    color: #FFFFFF;
+
+}
+.option:hover h1, .option:hover p{
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+.option:hover p:first-child{
+    color: #FFC80A;
+    transition: 0.5s;
 }
 .option p{
     font-size: 12px;
@@ -95,6 +111,29 @@ button{
     font-size: 12px;
     color: #212121;
     letter-spacing: 2.4px;
+    cursor: pointer;
+}
+@media (max-width: 900px){
+    .container{
+        max-width: 90%;
+        margin: auto;
+    }
+}
+@media (max-width: 760px){
+    .option{
+        padding: 8vh 5%;
+    }
+}
+@media (max-width: 510px){
+    .option{
+        padding: 8vh 20%;
+        width: 90%;
+    }
+    .options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 `
 
