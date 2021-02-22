@@ -88,6 +88,10 @@ h1 + p{
     color: #FFFFFF;
 
 }
+button:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+}
 .option:hover h1, .option:hover p{
     color: #FFFFFF;
     transition: 0.5s;
