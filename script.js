@@ -147,7 +147,7 @@ button{
 `
 
 const divUp = document.createElement('div')
-divUp.setAttribute('class', 'container')
+divUp.classList.add('container')
 divUp.innerHTML = `
     <h1>Choose Your Option</h1>
     <p>But I must explain to you how all this mistaken idea of denouncing </p>
@@ -155,14 +155,14 @@ divUp.innerHTML = `
 body.appendChild(divUp)
 
 const divOptions = document.createElement('div')
-divOptions.setAttribute('class', 'options')
+divOptions.classList.add('options')
 divUp.appendChild(divOptions)
 
 const divOption1 = document.createElement('div')
-divOption1.setAttribute('class', 'option')
+divOption1.classList.add('option')
 divOptions.appendChild(divOption1)
 const divOption2 = document.createElement('div')
-divOption2.setAttribute('class', 'option')
+divOption2.classList.add('option')
 divOptions.appendChild(divOption2)
 divOption1.innerHTML = `
 <p>FREELANCER</p>
