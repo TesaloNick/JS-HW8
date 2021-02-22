@@ -19,6 +19,16 @@ metaAuthor.setAttribute('name', 'author')
 metaAuthor.setAttribute('content', 'Antonovich Nikolay')
 head.appendChild(metaAuthor)
 
+const link1 = document.createElement('link') // <link rel="preconnect" href="https://fonts.gstatic.com">
+link1.setAttribute('rel', 'preconnect')
+link1.setAttribute('href', 'https://fonts.gstatic.com')
+head.appendChild(link1)
+
+const link2 = document.createElement('link') // <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+link2.setAttribute('rel', 'stylesheet')
+link2.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Arvo&family=Montserrat:wght@700&family=Open+Sans&display=swap')
+head.appendChild(link2)
+
 const title = document.createElement('title') // <title>
 head.appendChild(title)
 title.innerHTML = `JS-HW8`;
@@ -34,9 +44,59 @@ style.innerHTML = `*{
     box-sizing: border-box;
 }
 .container{
-    max-width: 1100px;
+    max-width: 800px;
     margin: auto;
-}`
+}
+.container > p{
+    font-size: 14px;
+}
+h1{
+    font-family: Arvo;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    color: #212121;
+    margin: 15px 0;
+}
+h1 + p{
+    font-family: Open Sans;
+    font-weight: 400;
+    text-align: center;
+    color: #9FA3A7;
+    margin-bottom: 55px;
+}
+.options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.option{
+    text-align: center;
+    padding: 16vh 20%;
+    border: #E8E9ED 1px solid;
+    border-radius: 2px; 
+}
+.option p{
+    font-size: 12px;
+}
+.option p:first-child{
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #9FA3A7;
+    letter-spacing: 2.4px;
+}
+button{
+    background-color: #FFFFFF;
+    width: 147px;
+    height: 46px;   
+    border: 3px solid #FFC80A;
+    border-radius: 23px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    color: #212121;
+    letter-spacing: 2.4px;
+}
+`
 
 const divUp = document.createElement('div')
 divUp.setAttribute('class', 'container')
@@ -46,4 +106,25 @@ divUp.innerHTML = `
 `
 body.appendChild(divUp)
 
+const divOptions = document.createElement('div')
+divOptions.setAttribute('class', 'options')
+divUp.appendChild(divOptions)
 
+const divOption1 = document.createElement('div')
+divOption1.setAttribute('class', 'option')
+divOptions.appendChild(divOption1)
+const divOption2 = document.createElement('div')
+divOption2.setAttribute('class', 'option')
+divOptions.appendChild(divOption2)
+divOption1.innerHTML = `
+<p>FREELANCER</p>
+<h1>Initially designed to</h1>
+<p>But I must explain to you how all this mistaken idea of denouncing </p>
+<button>START HERE</button>
+`
+divOption2.innerHTML = `
+<p>STUDIO</p>
+<h1>Initially designed to</h1>
+<p>But I must explain to you how all this mistaken idea of denouncing </p>
+<button>START HERE</button>
+`
